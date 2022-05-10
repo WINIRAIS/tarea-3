@@ -171,15 +171,12 @@ void* cargarDocumentos(Map *mapaGlobal, TreeMap * treemapDocs, int *numeroDocs){
      
     char *aux_nombreArchivo = (char*)malloc(sizeof(char));
     FILE * file;
-    int cont  = 0;
     do{
-        if(cont == 0){printf("Ingresar nombre archivo: \n");}
+        printf("Ingresar nombre archivo: \n");
         scanf("%s", &archivo);
-        
         strcpy(aux_nombreArchivo, archivo);
         strcat(archivo, ".txt");
         file = fopen(archivo, "r");
-        cont = 1;
     }while(!file);
     //Se hace el archivo
 
